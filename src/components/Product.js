@@ -21,12 +21,7 @@ function Product({ addToCart }) {
       {products.map((product, index) => (
         <div key={product.id} className="product">
           <Products
-            key={index}
-            number={index + 1}
-            name={product.name}
-            price={product.price}
-            id={product.id}
-            description={product.description}
+            key={index}{...product}
           />
           <AddToCart product={product} addToCart={addToCart} />
         </div>
